@@ -5,5 +5,14 @@
 
 開啟方案前須先安裝 TypeScript for Visual Studio 2012 擴充套件
 
-TypeScript for Visual Studio 2012: 
-http://www.microsoft.com/en-us/download/details.aspx?id=34790
+* [TypeScript for Visual Studio 2012] (http://www.microsoft.com/en-us/download/details.aspx?id=34790)
+   
+  
+相關連結
+-----------------
+
+* [The Will Will Web - 記載著 Will 在網路世界的學習心得與技術分享](http://blog.miniasp.com/) 
+
+* [Will 保哥的技術交流中心 (Facebook)] (http://www.facebook.com/will.fans)
+
+* [Will 保哥的噗浪] (http://www.plurk.com/willh/invite)
