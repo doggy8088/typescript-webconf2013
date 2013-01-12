@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypeScriptSamples", "TypeScriptSamples\TypeScriptSamples.csproj", "{B75DA00E-1490-44F3-BB1B-DF77D1A934DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatroomNodeJS", "ChatroomNodeJS\ChatroomNodeJS.csproj", "{9A41F0EA-4D91-4F7C-8C91-3AD8788DAE82}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TypeScriptRef", "TypeScriptRef", "{8F639259-8FD5-4111-BEAE-4FE25CD210B3}"
+	ProjectSection(SolutionItems) = preProject
+		jquery.d.ts = jquery.d.ts
+		modernizr-2.6.d.ts = modernizr-2.6.d.ts
+		node.d.ts = node.d.ts
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B75DA00E-1490-44F3-BB1B-DF77D1A934DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B75DA00E-1490-44F3-BB1B-DF77D1A934DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B75DA00E-1490-44F3-BB1B-DF77D1A934DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B75DA00E-1490-44F3-BB1B-DF77D1A934DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A41F0EA-4D91-4F7C-8C91-3AD8788DAE82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A41F0EA-4D91-4F7C-8C91-3AD8788DAE82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A41F0EA-4D91-4F7C-8C91-3AD8788DAE82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A41F0EA-4D91-4F7C-8C91-3AD8788DAE82}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

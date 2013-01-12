@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{9A41F0EA-4D91-4F7C-8C91-3AD8788DAE82}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <FileUpgradeFlags></FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>ChatroomNodeJS</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62785</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:62551/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl></CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptSourceMap> --sourcemap</TypeScriptSourceMap>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="node_modules\node-static\.npmignore" />
+    <TypeScriptCompile Include="node_modules\node-static\bin\test.ts" />
+    <Content Include="node_modules\node-static\bin\test.js">
+      <DependentUpon>test.ts</DependentUpon>
+    </Content>
+    <Content Include="node_modules\node-static\LICENSE" />
+    <Content Include="node_modules\node-static\node_modules\colors\package.json" />
+    <Content Include="node_modules\node-static\node_modules\colors\ReadMe.md" />
+    <Content Include="node_modules\node-static\node_modules\optimist\.travis.yml" />
+    <Content Include="node_modules\node-static\node_modules\optimist\LICENSE" />
+    <Content Include="node_modules\node-static\node_modules\optimist\node_modules\wordwrap\.npmignore" />
+    <Content Include="node_modules\node-static\node_modules\optimist\node_modules\wordwrap\package.json" />
+    <Content Include="node_modules\node-static\node_modules\optimist\node_modules\wordwrap\README.markdown" />
+    <Content Include="node_modules\node-static\node_modules\optimist\package.json" />
+    <Content Include="node_modules\node-static\node_modules\optimist\README.markdown" />
+    <Content Include="node_modules\node-static\package.json" />
+    <Content Include="node_modules\node-static\README.md" />
+    <Content Include="node_modules\websocket\binding.gyp" />
+    <Content Include="node_modules\websocket\CHANGELOG.md" />
+    <Content Include="node_modules\websocket\LICENSE" />
+    <Content Include="node_modules\websocket\Makefile" />
+    <Content Include="node_modules\websocket\package.json" />
+    <Content Include="node_modules\websocket\README.md" />
+    <Content Include="node_modules\websocket\vendor\node-ctype\LICENSE" />
+    <Content Include="public\frontend.css" />
+    <Content Include="public\Scripts\jquery.min.js" />
+    <Content Include="佈署與啟動 node.js 伺服器.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="node_modules\node-static\benchmark\node-static-0.3.0.txt" />
+    <Content Include="node_modules\node-static\bin\cli.js" />
+    <Content Include="node_modules\node-static\etc\404.html" />
+    <Content Include="node_modules\node-static\etc\trainwreck.jpg" />
+    <Content Include="node_modules\node-static\examples\file-server.js" />
+    <Content Include="node_modules\node-static\lib\node-static.js" />
+    <Content Include="node_modules\node-static\lib\node-static\mime.js" />
+    <Content Include="node_modules\node-static\lib\node-static\util.js" />
+    <Content Include="node_modules\node-static\node_modules\colors\colors.js" />
+    <Content Include="node_modules\node-static\node_modules\colors\example.html" />
+    <Content Include="node_modules\node-static\node_modules\colors\example.js" />
+    <Content Include="node_modules\node-static\node_modules\colors\MIT-LICENSE.txt" />
+    <Content Include="node_modules\node-static\node_modules\colors\test.js" />
+    <Content Include="node_modules\node-static\node_modules\optimist\example\bool.js" />
+    <Content Include="node_modules\node-static\node_modules\optimist\example\boolean_double.js" />
+    <Content Include="node_modules\node-static\node_modules\optimist\example\boolean_single.js" />
+    <Content Include="node_modules\node-static\node_modules\optimist\example\default_hash.js" />
+    <Content Include="node_modules\node-static\node_modules\optimist\example\default_singles.js" />
+    <Content Include="node_modules\node-static\node_modules\optimist\example\divide.js" />
+    <Content Include="node_modules\node-static\node_modules\optimist\example\line_count.js" />
+    <Content Include="node_modules\node-static\node_modules\optimist\example\line_count_options.js" />
+    <Content Include="node_modules\node-static\node_modules\optimist\example\line_count_wrap.js" />
+    <Content Include="node_modules\node-static\node_modules\optimist\example\nonopt.js" />
+    <Content Include="node_modules\node-static\node_modules\optimist\example\reflect.js" />
+    <Content Include="node_modules\node-static\node_modules\optimist\example\short.js" />
+    <Content Include="node_modules\node-static\node_modules\optimist\example\string.js" />
+    <Content Include="node_modules\node-static\node_modules\optimist\example\usage-options.js" />
+    <Content Include="node_modules\node-static\node_modules\optimist\example\xup.js" />
+    <Content Include="node_modules\node-static\node_modules\optimist\index.js" />
+    <Content Include="node_modules\node-static\node_modules\optimist\node_modules\wordwrap\example\center.js" />
+    <Content Include="node_modules\node-static\node_modules\optimist\node_modules\wordwrap\example\meat.js" />
+    <Content Include="node_modules\node-static\node_modules\optimist\node_modules\wordwrap\index.js" />
+    <Content Include="node_modules\node-static\node_modules\optimist\node_modules\wordwrap\test\break.js" />
+    <Content Include="node_modules\node-static\node_modules\optimist\node_modules\wordwrap\test\idleness.txt" />
+    <Content Include="node_modules\node-static\node_modules\optimist\node_modules\wordwrap\test\wrap.js" />
+    <Content Include="node_modules\node-static\node_modules\optimist\test\parse.js" />
+    <Content Include="node_modules\node-static\node_modules\optimist\test\usage.js" />
+    <Content Include="node_modules\node-static\node_modules\optimist\test\_.js" />
+    <Content Include="node_modules\node-static\node_modules\optimist\test\_\argv.js" />
+    <Content Include="node_modules\node-static\node_modules\optimist\test\_\bin.js" />
+    <Content Include="node_modules\node-static\node_modules\optimist\x.js" />
+    <Content Include="node_modules\node-static\test\fixtures\hello.txt" />
+    <Content Include="node_modules\node-static\test\fixtures\index.html" />
+    <Content Include="node_modules\node-static\test\integration\node-static-test.js" />
+    <Content Include="node_modules\websocket\index.js" />
+    <Content Include="node_modules\websocket\install.js" />
+    <Content Include="node_modules\websocket\lib\Constants.js" />
+    <Content Include="node_modules\websocket\lib\Deprecation.js" />
+    <Content Include="node_modules\websocket\lib\utils.js" />
+    <Content Include="node_modules\websocket\lib\Validation.fallback.js" />
+    <Content Include="node_modules\websocket\lib\Validation.js" />
+    <Content Include="node_modules\websocket\lib\websocket.js" />
+    <Content Include="node_modules\websocket\lib\WebSocketClient.js" />
+    <Content Include="node_modules\websocket\lib\WebSocketConnection.js" />
+    <Content Include="node_modules\websocket\lib\WebSocketFrame.js" />
+    <Content Include="node_modules\websocket\lib\WebSocketRequest.js" />
+    <Content Include="node_modules\websocket\lib\WebSocketRouter.js" />
+    <Content Include="node_modules\websocket\lib\WebSocketRouterRequest.js" />
+    <Content Include="node_modules\websocket\lib\WebSocketServer.js" />
+    <Content Include="node_modules\websocket\lib\xor.fallback.js" />
+    <Content Include="node_modules\websocket\lib\xor.js" />
+    <Content Include="node_modules\websocket\src\validation.cc" />
+    <Content Include="node_modules\websocket\src\xor.cpp" />
+    <Content Include="node_modules\websocket\vendor\FastBufferList.js" />
+    <Content Include="node_modules\websocket\vendor\node-ctype\ctio-faster.js" />
+    <Content Include="public\chat-frontend.js" />
+    <Content Include="public\frontend.html" />
+    <Content Include="public\index.html" />
+    <Content Include="public\Scripts\jquery.focus.js" />
+    <Content Include="public\Scripts\modernizr-2.6.2.js" />
+    <Content Include="server.js" />
+  </ItemGroup>
+  <Target Name="BeforeBuild">
+    <Message Text="Compiling TypeScript files" />
+    <Message Text="Executing tsc$(TypeScriptSourceMap) @(TypeScriptCompile -&gt;'&quot;%(fullpath)&quot;', ' ')" />
+    <Exec Command="tsc$(TypeScriptSourceMap) @(TypeScriptCompile -&gt;'&quot;%(fullpath)&quot;', ' ')" />
+  </Target>
+</Project>
