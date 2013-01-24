@@ -5,7 +5,8 @@ process.title = 'node-chat';
 var webSocketsServerPort = process.env.PORT || 8080;
 var webSocketServer = require('websocket').server;
 
-var webroot = './public';
+var webroot = require("path").join(__dirname, 'public');
+
 var nstatic = require('node-static');
 var file = new (nstatic.Server)(webroot, {
     cache: 600,
