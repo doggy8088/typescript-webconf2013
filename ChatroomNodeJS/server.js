@@ -5,6 +5,10 @@ process.title = 'node-chat';
 var webSocketsServerPort = process.env.PORT || 8080;
 var webSocketServer = require('websocket').server;
 
+var Encoder = require('node-html-encoder').Encoder;
+var encoder = new Encoder('entity');
+
+
 var webroot = require("path").join(__dirname, 'public');
 
 var nstatic = require('node-static');
@@ -17,11 +21,6 @@ var http = require('http');
 var util = require('util');
 var msghistory = [];
 var clients = [];
-
-function htmlEntities(str)
-{
-    return String(str).replace(/&/g, '&').replace(/</g, '<').replace(/>/g, '>').replace(/"/g, '"');
-}
 
 var colors = [
     'red',
@@ -79,8 +78,8 @@ wsServer.on('request', function (request)
 
     var connection = request.accept(null, request.origin);
     var index = clients.push(connection) - 1;
-    var userName = false;
-    var userColor = false;
+    var userName = '';
+    var userColor = '';
 
     console.log((new Date()) + ' Connection accepted.');
 
@@ -88,7 +87,7 @@ wsServer.on('request', function (request)
     {
         connection.sendUTF(JSON.stringify({
             type: 'history',
-            data: msghistory
+            data: encoder.htmlEncode(msghistory || '')
         }));
     }
 
@@ -98,8 +97,9 @@ wsServer.on('request', function (request)
         {
             if (userName === '')
             {
-                userName = htmlEntities(message.utf8Data);
+                userName = message.utf8Data;
                 userColor = colors.shift();
+                
                 connection.sendUTF(JSON.stringify({
                     type: 'color',
                     data: userColor
@@ -111,9 +111,9 @@ wsServer.on('request', function (request)
                 console.log((new Date()) + ' Received Message from ' + userName + ': ' + message.utf8Data);
                 var obj = {
                     time: (new Date()).getTime(),
-                    text: htmlEntities(message.utf8Data),
-                    author: userName,
-                    color: userColor
+                    text: encoder.htmlEncode(message.utf8Data),
+                    author: encoder.htmlEncode(userName),
+                    color: encoder.htmlEncode(userColor)
                 };
 
                 msghistory.push(obj);
